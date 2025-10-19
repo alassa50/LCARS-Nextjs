@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Antonio', sans-serif;
+  background-color: #000000;
+  color: #FFCC99;
+}
+
+@layer utilities {
+  .lcars-border {
+    border: 2px solid;
+    border-radius: 0;
+  }
+  
+  .lcars-panel {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+  }
+  
+  .lcars-glow {
+    box-shadow: 0 0 10px currentColor;
+  }
+}
