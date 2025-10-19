@@ -14,7 +14,7 @@ const config: Config = {
           blue: '#9999FF',
           purple: '#CC99CC',
           red: '#CC6666',
-          yellow: '#FFCC99',
+          yellow: '#FFCC66',
           tan: '#FFCC99',
           peach: '#FF9966',
           lightblue: '#99CCFF',

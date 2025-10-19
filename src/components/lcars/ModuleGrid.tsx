@@ -2,15 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-
-interface Module {
-  id: string
-  name: string
-  description: string
-  icon: string
-  color: string
-  route: string
-}
+import { Module } from '@/types'
 
 const modules: Module[] = [
   {
