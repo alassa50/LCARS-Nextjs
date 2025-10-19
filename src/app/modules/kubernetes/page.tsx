@@ -23,10 +23,10 @@ export default function KubernetesModule() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Running': return 'text-green-400'
-      case 'Pending': return 'text-yellow-400'
-      case 'Failed': return 'text-red-400'
-      default: return 'text-lcars-tan'
+      case 'Running': return 'text-lcars-teal'
+      case 'Pending': return 'text-lcars-yellow'
+      case 'Failed': return 'text-lcars-pink'
+      default: return 'text-lcars-purple'
     }
   }
 
@@ -34,25 +34,25 @@ export default function KubernetesModule() {
     <main className="min-h-screen bg-lcars-background">
       <LCARSHeader title="KUBERNETES" subtitle="GCP Cluster Management" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <Link href="/">
-          <LCARSButton variant="red" className="mb-4 w-48">← BACK TO MAIN</LCARSButton>
+          <LCARSButton variant="pink" className="mb-6 w-56">← BACK TO MAIN</LCARSButton>
         </Link>
 
         <LCARSPanel title="CLUSTER STATUS">
-          <div className="space-y-2">
+          <div className="space-y-3">
             {pods.map((pod, index) => (
               <div
                 key={index}
-                className="p-3 bg-lcars-panel border border-lcars-red rounded flex items-center justify-between"
+                className="p-4 bg-lcars-panel border-2 border-lcars-pink rounded-2xl flex items-center justify-between hover:bg-opacity-50 hover:border-lcars-magenta transition-all"
               >
                 <div>
-                  <div className="font-bold">⚙️ {pod.name}</div>
-                  <div className="text-sm opacity-70">
+                  <div className="font-bold text-lcars-cyan">⚙️ {pod.name}</div>
+                  <div className="text-sm opacity-70 text-lcars-purple">
                     Namespace: {pod.namespace} • Restarts: {pod.restarts}
                   </div>
                 </div>
-                <div className={`font-bold ${getStatusColor(pod.status)}`}>
+                <div className={`font-bold text-lg ${getStatusColor(pod.status)}`}>
                   {pod.status}
                 </div>
               </div>

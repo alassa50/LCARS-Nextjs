@@ -24,29 +24,29 @@ export default function GitHubModule() {
     <main className="min-h-screen bg-lcars-background">
       <LCARSHeader title="GITHUB" subtitle="Source Code Repository Access" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <Link href="/">
-          <LCARSButton variant="yellow" className="mb-4 w-48">← BACK TO MAIN</LCARSButton>
+          <LCARSButton variant="yellow" className="mb-6 w-56">← BACK TO MAIN</LCARSButton>
         </Link>
 
         <LCARSPanel title="REPOSITORIES">
-          <div className="space-y-3">
+          <div className="space-y-4">
             {repos.map((repo, index) => (
               <div
                 key={index}
-                className="p-4 bg-lcars-panel border-2 border-lcars-yellow rounded hover:bg-opacity-50"
+                className="p-5 bg-lcars-panel border-3 border-lcars-yellow rounded-2xl hover:bg-opacity-50 hover:border-lcars-magenta transition-all"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-lcars-yellow">🔧 {repo.name}</h3>
-                    <p className="text-sm mt-1">{repo.description}</p>
-                    <div className="text-sm mt-2">
+                    <h3 className="text-2xl font-bold text-lcars-cyan">🔧 {repo.name}</h3>
+                    <p className="text-sm mt-1 text-lcars-purple">{repo.description}</p>
+                    <div className="text-sm mt-2 text-lcars-yellow">
                       ⭐ {repo.stars} stars • {repo.language}
                     </div>
                   </div>
-                  <div className="space-x-2">
+                  <div className="space-x-3">
                     <LCARSButton variant="yellow" className="w-32">VIEW</LCARSButton>
-                    <LCARSButton variant="blue" className="w-32">CLONE</LCARSButton>
+                    <LCARSButton variant="teal" className="w-32">CLONE</LCARSButton>
                   </div>
                 </div>
               </div>

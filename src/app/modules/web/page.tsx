@@ -20,36 +20,36 @@ export default function WebModule() {
     <main className="min-h-screen bg-lcars-background">
       <LCARSHeader title="WEB ACCESS" subtitle="Internet Resource Browser" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <Link href="/">
-          <LCARSButton variant="lightblue" className="mb-4 w-48">← BACK TO MAIN</LCARSButton>
+          <LCARSButton variant="violet" className="mb-6 w-56">← BACK TO MAIN</LCARSButton>
         </Link>
 
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-6">
           <LCARSPanel title="NAVIGATION">
-            <div className="space-y-4">
-              <div className="flex space-x-2">
+            <div className="space-y-6">
+              <div className="flex space-x-3">
                 <input
                   type="text"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleNavigate()}
                   placeholder="https://example.com"
-                  className="flex-1 p-3 bg-lcars-panel border-2 border-lcars-lightblue text-lcars-tan rounded"
+                  className="flex-1 p-4 bg-lcars-panel border-3 border-lcars-purple text-lcars-cyan rounded-2xl focus:border-lcars-violet focus:outline-none"
                 />
                 <button
                   onClick={handleNavigate}
-                  className="bg-lcars-lightblue text-black font-bold py-3 px-8 rounded-full hover:opacity-80"
+                  className="bg-lcars-violet text-black font-bold py-4 px-10 rounded-3xl hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg"
                 >
                   GO
                 </button>
               </div>
 
-              <div className="bg-black p-4 rounded h-96 flex items-center justify-center">
-                <div className="text-center text-lcars-lightblue">
-                  <div className="text-6xl mb-4">🌐</div>
-                  <div className="text-xl">WEB VIEWER</div>
-                  <div className="text-sm mt-2 opacity-70">
+              <div className="bg-black p-8 rounded-2xl h-96 flex items-center justify-center border-2 border-lcars-purple">
+                <div className="text-center text-lcars-violet">
+                  <div className="text-7xl mb-4">🌐</div>
+                  <div className="text-2xl font-bold">WEB VIEWER</div>
+                  <div className="text-sm mt-3 opacity-70 text-lcars-purple">
                     Enter a URL to browse external resources
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function WebModule() {
                 {history.map((item, index) => (
                   <div
                     key={index}
-                    className="p-2 bg-lcars-panel border border-lcars-lightblue rounded text-sm"
+                    className="p-3 bg-lcars-panel border-2 border-lcars-violet rounded-2xl text-sm text-lcars-cyan hover:border-lcars-magenta transition-all"
                   >
                     {item}
                   </div>
