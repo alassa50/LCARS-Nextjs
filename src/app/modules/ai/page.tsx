@@ -39,26 +39,26 @@ export default function AIModule() {
     <main className="min-h-screen bg-lcars-background">
       <LCARSHeader title="AI ASSISTANT" subtitle="Artificial Intelligence Interface" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <Link href="/">
-          <LCARSButton variant="tan" className="mb-4 w-48">← BACK TO MAIN</LCARSButton>
+          <LCARSButton variant="lime" className="mb-6 w-56">← BACK TO MAIN</LCARSButton>
         </Link>
 
         <LCARSPanel title="AI COMMUNICATION CHANNEL">
-          <div className="space-y-4">
-            <div className="h-96 overflow-y-auto bg-black p-4 rounded space-y-3">
+          <div className="space-y-6">
+            <div className="h-96 overflow-y-auto bg-black p-6 rounded-2xl space-y-4 border-2 border-lcars-purple">
               {messages.length === 0 && (
-                <div className="text-center text-lcars-blue opacity-50 py-8">
+                <div className="text-center text-lcars-purple opacity-50 py-8 text-xl">
                   READY FOR INPUT...
                 </div>
               )}
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`p-3 rounded ${
+                  className={`p-4 rounded-2xl shadow-lg ${
                     message.role === 'user'
-                      ? 'bg-lcars-blue text-black ml-12'
-                      : 'bg-lcars-orange text-black mr-12'
+                      ? 'bg-lcars-cyan text-black ml-12'
+                      : 'bg-lcars-magenta text-black mr-12'
                   }`}
                 >
                   <div className="font-bold mb-1">
@@ -68,25 +68,25 @@ export default function AIModule() {
                 </div>
               ))}
               {loading && (
-                <div className="text-lcars-orange animate-pulse">
+                <div className="text-lcars-magenta animate-pulse text-lg">
                   PROCESSING...
                 </div>
               )}
             </div>
 
-            <div className="flex space-x-2">
+            <div className="flex space-x-3">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Enter your query..."
-                className="flex-1 p-3 bg-lcars-panel border-2 border-lcars-orange text-lcars-tan rounded"
+                className="flex-1 p-4 bg-lcars-panel border-3 border-lcars-purple text-lcars-cyan rounded-2xl focus:border-lcars-magenta focus:outline-none"
               />
               <button
                 onClick={handleSend}
                 disabled={loading}
-                className="bg-lcars-orange text-black font-bold py-3 px-8 rounded-full hover:opacity-80"
+                className="bg-lcars-magenta text-black font-bold py-4 px-10 rounded-3xl hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg"
               >
                 SEND
               </button>

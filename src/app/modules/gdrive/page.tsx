@@ -35,30 +35,30 @@ export default function GDriveModule() {
     <main className="min-h-screen bg-lcars-background">
       <LCARSHeader title="GOOGLE DRIVE" subtitle="Cloud Document Access" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <Link href="/">
-          <LCARSButton variant="peach" className="mb-4 w-48">← BACK TO MAIN</LCARSButton>
+          <LCARSButton variant="teal" className="mb-6 w-56">← BACK TO MAIN</LCARSButton>
         </Link>
 
         <LCARSPanel title="MY DRIVE">
-          <div className="space-y-2">
+          <div className="space-y-3">
             {files.map((file, index) => (
               <div
                 key={index}
-                className="p-3 bg-lcars-panel border border-lcars-peach rounded flex items-center justify-between hover:bg-opacity-50"
+                className="p-4 bg-lcars-panel border-2 border-lcars-teal rounded-2xl flex items-center justify-between hover:bg-opacity-50 hover:border-lcars-magenta transition-all"
               >
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">{getIcon(file.type)}</span>
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">{getIcon(file.type)}</span>
                   <div>
-                    <div className="font-bold">{file.name}</div>
-                    <div className="text-sm opacity-70">
+                    <div className="font-bold text-lcars-cyan">{file.name}</div>
+                    <div className="text-sm opacity-70 text-lcars-purple">
                       {file.type} • {file.size} • Modified: {file.modified}
                     </div>
                   </div>
                 </div>
-                <div className="space-x-2">
-                  <LCARSButton variant="peach" className="w-32">OPEN</LCARSButton>
-                  <LCARSButton variant="blue" className="w-32">SHARE</LCARSButton>
+                <div className="space-x-3">
+                  <LCARSButton variant="teal" className="w-32">OPEN</LCARSButton>
+                  <LCARSButton variant="purple" className="w-32">SHARE</LCARSButton>
                 </div>
               </div>
             ))}

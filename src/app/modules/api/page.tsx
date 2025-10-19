@@ -31,31 +31,31 @@ export default function APIModule() {
     <main className="min-h-screen bg-lcars-background">
       <LCARSHeader title="API INTERFACE" subtitle="External API Communication" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <Link href="/">
-          <LCARSButton variant="orange" className="mb-4 w-48">← BACK TO MAIN</LCARSButton>
+          <LCARSButton variant="magenta" className="mb-6 w-56">← BACK TO MAIN</LCARSButton>
         </Link>
 
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-6">
           <LCARSPanel title="API REQUEST CONFIGURATION">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
-                <label className="block mb-2 text-lcars-orange">REQUEST URL</label>
+                <label className="block mb-2 text-lcars-cyan font-bold">REQUEST URL</label>
                 <input
                   type="text"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   placeholder="https://api.example.com/endpoint"
-                  className="w-full p-3 bg-lcars-panel border-2 border-lcars-orange text-lcars-tan rounded"
+                  className="w-full p-4 bg-lcars-panel border-3 border-lcars-purple text-lcars-cyan rounded-2xl focus:border-lcars-magenta focus:outline-none"
                 />
               </div>
               
               <div>
-                <label className="block mb-2 text-lcars-orange">METHOD</label>
+                <label className="block mb-2 text-lcars-cyan font-bold">METHOD</label>
                 <select
                   value={method}
                   onChange={(e) => setMethod(e.target.value)}
-                  className="w-full p-3 bg-lcars-panel border-2 border-lcars-orange text-lcars-tan rounded"
+                  className="w-full p-4 bg-lcars-panel border-3 border-lcars-purple text-lcars-cyan rounded-2xl focus:border-lcars-magenta focus:outline-none"
                 >
                   <option>GET</option>
                   <option>POST</option>
@@ -67,7 +67,7 @@ export default function APIModule() {
               <button
                 onClick={handleAPICall}
                 disabled={loading}
-                className="bg-lcars-blue text-black font-bold py-3 px-8 rounded-full hover:opacity-80"
+                className="bg-lcars-cyan text-black font-bold py-4 px-10 rounded-3xl hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-lg"
               >
                 {loading ? 'EXECUTING...' : 'EXECUTE REQUEST'}
               </button>
@@ -76,7 +76,7 @@ export default function APIModule() {
 
           {response && (
             <LCARSPanel title="RESPONSE DATA">
-              <pre className="bg-black p-4 rounded overflow-auto max-h-96 text-lcars-blue">
+              <pre className="bg-black p-6 rounded-2xl overflow-auto max-h-96 text-lcars-cyan border-2 border-lcars-purple">
                 {response}
               </pre>
             </LCARSPanel>
