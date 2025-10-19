@@ -6,16 +6,16 @@ import ModuleGrid from '@/components/lcars/ModuleGrid'
 export default function Home() {
   return (
     <main className="min-h-screen bg-lcars-background">
-      <LCARSHeader title="COMPUTER INTERFACE" subtitle="LCARS v24.8" />
+      <LCARSHeader title="COMPUTER INTERFACE" subtitle="LCARS LOWER DECKS v24.8" />
       
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-6">
         <div className="grid grid-cols-12 gap-4">
           {/* Left Sidebar */}
-          <div className="col-span-2 space-y-2">
-            <LCARSButton variant="orange">MAIN</LCARSButton>
-            <LCARSButton variant="blue">STATUS</LCARSButton>
-            <LCARSButton variant="purple">DATA</LCARSButton>
-            <LCARSButton variant="red">ALERT</LCARSButton>
+          <div className="col-span-2 space-y-3">
+            <LCARSButton variant="purple">MAIN</LCARSButton>
+            <LCARSButton variant="cyan">STATUS</LCARSButton>
+            <LCARSButton variant="magenta">DATA</LCARSButton>
+            <LCARSButton variant="pink">ALERT</LCARSButton>
             <LCARSButton variant="yellow">SYSTEMS</LCARSButton>
           </div>
           
@@ -27,12 +27,12 @@ export default function Home() {
           </div>
           
           {/* Right Sidebar */}
-          <div className="col-span-2 space-y-2">
-            <LCARSButton variant="lightblue">COMM</LCARSButton>
-            <LCARSButton variant="peach">NAV</LCARSButton>
-            <LCARSButton variant="tan">ENG</LCARSButton>
-            <LCARSButton variant="orange">OPS</LCARSButton>
-            <LCARSButton variant="blue">SCI</LCARSButton>
+          <div className="col-span-2 space-y-3">
+            <LCARSButton variant="cyan">COMM</LCARSButton>
+            <LCARSButton variant="teal">NAV</LCARSButton>
+            <LCARSButton variant="violet">ENG</LCARSButton>
+            <LCARSButton variant="magenta">OPS</LCARSButton>
+            <LCARSButton variant="purple">SCI</LCARSButton>
           </div>
         </div>
       </div>

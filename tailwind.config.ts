@@ -10,16 +10,24 @@ const config: Config = {
     extend: {
       colors: {
         lcars: {
+          // Lower Decks color palette
+          purple: '#B388FF',        // Primary purple
+          magenta: '#E040FB',       // Bright magenta
+          cyan: '#00E5FF',          // Bright cyan/teal
+          yellow: '#FFD600',        // Bright yellow
+          pink: '#FF4081',          // Hot pink
+          teal: '#1DE9B6',          // Teal accent
+          violet: '#7C4DFF',        // Deep violet
+          lime: '#76FF03',          // Lime green
+          // Legacy colors for compatibility
           orange: '#FF9900',
           blue: '#9999FF',
-          purple: '#CC99CC',
           red: '#CC6666',
-          yellow: '#FFCC66',
           tan: '#FFCC99',
           peach: '#FF9966',
           lightblue: '#99CCFF',
-          background: '#000000',
-          panel: '#1A1A1A',
+          background: '#0A0014',    // Deep purple-black
+          panel: '#1A0F2E',         // Dark purple panel
         },
       },
       fontFamily: {
