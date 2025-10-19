@@ -1,0 +1,69 @@
+{
+  "name": "lcars-nextjs",
+  "version": "1.0.0",
+  "description": "Interface LCARS en nextjs",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "electron": "electron .",
+    "electron:dev": "concurrently \"cross-env BROWSER=none npm run dev\" \"wait-on http://localhost:3000 && cross-env NODE_ENV=development ELECTRON_START_URL=http://localhost:3000 electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "electron:build:win": "npm run build && electron-builder --win",
+    "electron:build:mac": "npm run build && electron-builder --mac",
+    "electron:build:linux": "npm run build && electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.lcars.interface",
+    "productName": "LCARS Interface",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "electron/**/*",
+      ".next/**/*",
+      "public/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "public/icon.png"
+    },
+    "mac": {
+      "target": ["dmg"],
+      "icon": "public/icon.png"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "icon": "public/icon.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/node": "^24.8.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^15.5.6",
+    "next": "^15.5.6",
+    "postcss": "^8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^38.3.0",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^9.0.1"
+  }
+}

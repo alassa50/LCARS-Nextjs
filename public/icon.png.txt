@@ -1,0 +1,7 @@
+This is a placeholder for the application icon.
+For production, replace with an actual .png icon file (512x512 recommended).
+
+You can create an LCARS-themed icon using:
+- The LCARS orange color (#FF9900)
+- Star Trek command insignia
+- Computer interface graphics
